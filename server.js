@@ -20,3 +20,14 @@ function handleRequestTwo(request, response) {
 
 var serverOne = http.createServer(handleRequestOne);
 var serverTwo = http.createServer(handleRequestTwo);
+
+// listener requests to start servers
+serverOne.listen(PORTONE, function() {
+
+    // callback triggered when server is successfully listening
+    console.log("Server listening on: http://localhost:" + PORTONE);
+});
+
+serverTwo.listen(PORTTWO, function(){
+    console.log("Server listening on: http://localhost:" + PORTTWO);
+});
