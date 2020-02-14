@@ -15,3 +15,8 @@ function handleRequestOne(request, response) {
 function handleRequestTwo(request, response) {
     response.end("Never trust a computer you can't throw out a window.");
 }
+
+// create servers using the HTTP package to take in handleRequest functions as callbacks
+
+var serverOne = http.createServer(handleRequestOne);
+var serverTwo = http.createServer(handleRequestTwo);
